@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple ScrollMagic Tutorial</title>
+
+<script type="text/javascript" src="./lib/jquery-3.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./lib/bootstrap.min.css">
+<script type="text/javascript" src="./lib/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Anton|Oxygen|Roboto" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  
+</head>
+
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="0">
+
+<video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <source src="./video/TalkTrashCut3.webm" type="video/webm">
+    <source src="./video/TalkTrashCut3.mp4" type="video/mp4">
+</video>
+
+
+<nav class="navbar" id="my_dear_navbar" style="position: fixed; width: 100%; z-index: 100;">
+    
+        <span class="navbar-header"  >
+            <a class="navbar-brand" href="index.html">
+            <!-- <img src="./image/SanitationLogo.svg"></a> -->
+        </span>
+        <!-- <span style="width: 60%; visibility: hidden;"></span> -->
+        
+        <ul class="nav navbar-nav navbar-right animated" id="nav-words">
+            <li><a id="nav-section1" style="color: white; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: bold;">Don't Trash New York &nbsp; </a></li>
+            <li><a id="nav-section2" style="color: white; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: bold;">Here's Why &nbsp; </a> </li>
+            <li><a id="nav-section3" style="color: white; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: bold;">0X30 &nbsp; </a></li>
+            <li style="visibility: hidden;">Place</li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" id="nav-line" style="display: none;">
+            <li><a style="visibility: hidden;"></a> </li>
+            <li><a style="cursor: pointer;"><img src="./image/navLine.svg" id="nav-line-change"></a></li>
+            <li><a style="visibility: hidden;">0X30</a></li>
+            <li style="visibility: hidden;">Placeholder</li>
+        </ul>
+        
+</nav>
+
+<div id="trigger1" style="width: 100%; position: absolute; top: 45px; visibility: hidden;"></div>
+
+
+<!-- <div id="screenA-background" style="height: 100%; width: 100%; position: absolute; display: none;"></div>
+ -->
+
+
+<nav id="myScrollspy" style="display: none;">
+      <ul class="nav nav-stacked nav-pills" style="top: 100px; left: 50px; position: fixed; z-index: 1000 !important;">
+        <li><a style="cursor: pointer;" href="#two" id="scrollspy-section1" class="nav-indicator"></a></li>
+        <li><a style="cursor: pointer;" href="#three" id="scrollspy-section2" class="nav-indicator"></a></li>
+        <li><a style="cursor: pointer;" href="#four" id="scrollspy-section3" class="nav-indicator"></a></li>
+      </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+<section id="one">
+    <div class="inner innerS1">
+      <div>
+        <h1 style="color: white; text-align: left !important; font-family: 'Anton', sans-serif; font-size: 48px;">See someone littering ?</h1>
+        <h1 style="color: white; font-family: 'Anton', sans-serif; font-size: 48px;">Tell them where to put it.</h1>
+        <h2 style="color: white; font-size: 24px;"> <span style="border-top-style: solid; border-top-color:grey; padding-top: 10px; font-family: 'Roboto', sans-serif;">watch  the TV spot &nbsp; <img id="playButtonId" src="./image/play-button.svg" style="position: relative; top: 0px;"></span></h2>
+      </div>
+    </div>
+    
+</section>
+
+<div id="TalkTrashNewYork" style="width: 100%">
+      <h1 style="text-align: center; color: black; font-size: 36px;"><strong>#TalkTrashNewYork </strong></h1>
+      <h3 style="text-align: center; color: black; font-family: 'Roboto', sans-serif; font-size: 18px;"><b>#TalkTrashNewYork</b> is DSNY's call to action, encouraging New Yorker to do their share by putting litter where it goes - in a basket. </h3>
+      <h3 style="text-align: center; color: black; font-family: 'Roboto', sans-serif; font-size: 18px;"> (Reminding fellow New Yorker to do the same helps, too!) </h3>
+</div>
+
+
+
+
+
+
+
+
+
+<section id="two">
+  <div class="innerText innerS2">
+      
+      <h2>Don't trash New York</h2>
+      <ul class="features">
+          <li>Litter trashes our town. Garbage along our streets and sidewalks</li>
+          <li>reaches our sewers, then floats to our beaches - where it hurs</li>
+          <li>wildlife, damages our landscape and messes up summer.</li>
+          <li><br></li>
+          <li>To keep New York City beautiful and protect our environment, the</li>
+          <li>NYC Department of Sanitation empties more than 23,500</li>
+          <li>sidewalks across the five boroughs and mechanical brooms</li>
+          <li>sweep more than XXX miles of streets and highway ramps each</li>
+          <li>week.</li>
+      </ul>
+  </div>   
+</section>
+<section id="three">
+  <div class="innerText innerS3">
+      <h2>Here's Why </h2>
+      <ul class="features">
+        <li>Littering can be hazardous to one's own health as well. Trash in an</li>
+        <li>area attracts vermin and bacteria. Broken glass and other sharp</li>
+        <li>objects are dangerous when they are left lying around in public</li>
+        <li>places.</li>
+        <li>Litter is harmful to wildlife as well. Plastic can cause animals such</li>
+        <li>as birds to choke, when they mistake it for food. And, even worse,</li>
+        <li>small bits of plastic can accumulate in the stomach of a bird,</li>
+        <li>never digesting or decomposing, to the point where there is no</li>
+        <li>more room for real food and the bird starves to death with a full</li>
+        <li>stomach.</li>
+        <li>Lastly, but most obviously, litter makes an area look bad. When a</li>
+        <li>large amount of litter can be found in a particular environment, it</li>
+        <li>reflects badly on the people who live there. [http://</li>
+        <li>environment.newarchaeology.com/littering.php]</li>
+        
+      </ul>
+      <!-- <h1> Here's Why </h1>
+      <p>Littering can be hazardous to one's own health as well. Trash in an area attracts vermin and bacteria. Broken glass and other sharp objects are dangerous when they are left lying around in public places.</p>
+
+      <p>Litter is harmful to wildlife as well. Plastic can cause animals such as birds to choke, when they mistake it for food. And, even worse, small bits of plastic can accumulate in the stomach of a bird, never digesting or decomposing, to the point where there is no more room for real food and the bird starves to death with a full stomach. </p>
+      <p>Lastly, but most obviously, litter makes an area look bad. When a large amount of litter can be found in a particular environment, it reflects badly on the people who live there. [http://environment.newarchaeology.com/littering.php]</p> -->
+  </div>
+</section>
+<section id="four">
+  <div class="innerText innerS4">
+      <h2>0X30</h2>
+      <ul class="features">
+        <li>0X30: New York City will be contributing zero waste to landfills by</li>
+        <li>2030.  As one of the largest cities in the world to make a</li>
+        <li>commitment to Zero Waste. The City is the first to commit to</li>
+        <li>meeting at least 90% of the Zero Waste goal through a unique</li>
+        <li>combination of waste reduction, reuse, recycling programs, and</li>
+        <li>wastewater treatment plants using food waste for co-generation.</li>
+        <li>NYC’s Zero Waste program relies far less on conventional waste-</li>
+        <li>to-energy processing and instead emphasizes highest and best</li>
+        <li>use of commodities and materials in the waste stream.</li>
+      </ul>
+
+
+
+
+  </div>
+    
+</section>
+
+<div class="iphone">
+        <!-- <p class="screen screenHat"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/107366/img_scrollMagic.png" /></p> -->
+        <p class="screen screenA"><div id="sub-section1" style="z-index: -150; height: 100%;"> 
+        </div></p>
+        <p class="screen screenB"><span id="sub-section2" style="z-index: -100; height: 100%;">
+        </span></p>
+        <p class="screen screenC"><span id="sub-section3" style="z-index: -130; height: 100%;">
+        </span></p>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="talktrashfooter" style="width: 100%; height: auto; background-color: #4A4A4A;" >
+    <div class="flexbox-footer" style="margin-top: 30px; margin-bottom: 11px;">
+      <div style="color: #FFFFFF;font-weight: bold;font-family: 'Oxygen', sans-serif; font-size: 16px;">DOWNLOAD FREE DONATENYC APP</div>
+      <div style="visibility: hidden;">DOWNLOAD FREE DONATENYC APP</div>
+      <div style="color: #FFFFFF;font-weight: bold; font-family: 'Oxygen', sans-serif; font-size: 16px;">FOLLOW US</div>
+    </div>
+    <div class="flexbox-footer" style="margin-bottom: 25px;">
+      <div style="display: inline-flex;">
+        <img src="./footer/Appstore.svg"> &nbsp;&nbsp;
+        <img src="./footer/Playstore.svg">
+      </div>
+      <div style="display: inline-flex; visibility: hidden;">
+        <img src="./footer/Appstore.svg">
+        <img src="./footer/Playstore.svg">
+      </div>
+      <div style="display: inline-flex;">
+        <img src="./footer/facebook.svg"> &nbsp;&nbsp;&nbsp;
+        <img src="./footer/twitter.svg"> &nbsp;&nbsp;&nbsp;
+        <img src="./footer/instagram.svg">
+      </div>
+    </div>
+    
+    <div class="flexbox-footer" id="departmentofsanitation" style="padding-top: 10px; padding-bottom: 20px;">
+      <div><img src="./footer/FooterText.svg"></div>
+      <div style="visibility: hidden;">DOWNLOAD FREE DONATENYC APP</div>
+      <div style="visibility: hidden;">placeholder</div>
+    </div>
+
+</div>
+
+
+
+
+
+<div id="talktrashfooter-mobile" style="width: 100%; height: auto;background-color: #4A4A4A;">
+  <div class="flexbox-footer-mobile" style="margin-top: 22px;margin-bottom: 12px;">
+        <div style="color: #FFFFFF;font-weight: bold;font-family: 'Oxygen', sans-serif; font-size: 14px;">DOWNLOAD FREE DONATENYC APP</div>
+  </div>
+
+  <div class="flexbox-footer-mobile">
+        <img src="./footer/Appstore.svg"> &nbsp;&nbsp;
+        <img src="./footer/Playstore.svg">
+  </div>
+
+  <div class="flexbox-footer-mobile" style="margin-top: 29.37px; margin-bottom: 11px;">
+        <div style="color: #FFFFFF;font-weight: bold; font-family: 'Oxygen', sans-serif; font-size: 14px;">FOLLOW US</div>
+  </div>
+
+  <div class="flexbox-footer-mobile" style="margin-bottom: 20.02px; ">
+        <img src="./footer/facebook.svg"> &nbsp;&nbsp;&nbsp;
+        <img src="./footer/twitter.svg"> &nbsp;&nbsp;&nbsp;
+        <img src="./footer/instagram.svg">
+  </div>
+
+  <div class="flexbox-footer-mobile" style="border-top: 1px solid #535353; padding-top: 10px; padding-bottom: 20px;">
+      <!-- <img src="./footer/FooterText.svg"> -->
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
